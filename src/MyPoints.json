@@ -1,0 +1,82 @@
+[{
+        "id": 1,
+        "title": "University of Tartu",
+        "location": {
+            "lat": 58.381091,
+            "lng": 26.719866
+        }
+    },
+    {
+        "id": 2,
+        "title": "University of Tartu Old Observatory",
+        "location": {
+            "lat": 58.378811,
+            "lng": 26.720091
+        }
+    },
+    {
+        "id": 3,
+        "title": "Tartu University Library",
+        "location": {
+            "lat": 58.376726,
+            "lng": 26.720674
+        }
+    },
+    {
+        "id": 4,
+        "title": "University Church",
+        "location": {
+            "lat": 58.381023,
+            "lng": 26.719095
+        }
+    },
+    {
+        "id": 5,
+        "title": "University Museum",
+        "location": {
+            "lat": 58.380233,
+            "lng": 26.715404
+        }
+    },
+    {
+        "id": 6,
+        "title": "Institute of Computer Science",
+        "location": {
+            "lat": 58.378249,
+            "lng": 26.714673
+        }
+    },
+    {
+        "id": 7,
+        "title": "Old Anatomical Theatre",
+        "location": {
+            "lat": 58.378016,
+            "lng": 26.717485
+        }
+    },
+    {
+        "id": 8,
+        "title": "Tartu University Hospital",
+        "location": {
+            "lat": 58.369697,
+            "lng": 26.701758
+        }
+    },
+    {
+        "id": 9,
+        "title": "Institute of Chemistry",
+        "location": {
+            "lat": 58.367154,
+            "lng": 26.693157
+        }
+    },
+    {
+        "id": 10,
+        "title": "Institute of Physics",
+        "location": {
+            "lat": 58.366192,
+            "lng": 26.690207
+        }
+    }
+
+]
