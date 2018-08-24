@@ -52,8 +52,9 @@ class App extends Component {
 
       marker.addListener('click', function () {
         initMapContext.setActiveMarker(marker);
-        initMapContext.getActiveMerkerInfo(marker)
-        initMapContext.populateInfoWindow(this, infoWindow, map);
+        initMapContext.getActiveMerkerInfo(marker).then(response =>
+          initMapContext.populateInfoWindow(this, infoWindow, map) 
+        )
       });
     }
 
@@ -70,7 +71,7 @@ class App extends Component {
     }
 
   getActiveMerkerInfo = (marker) => {
-    LocalAPI.getWikipediaData(this.state.activeMarker.title)
+    return LocalAPI.getWikipediaData(this.state.activeMarker.title)
         .then(response => { this.setState({ placeInfo: response }) })
   }
 
