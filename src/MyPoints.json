@@ -24,15 +24,15 @@
     },
     {
         "id": 3,
-        "title": "University Church",
+        "title": "Estonian Biocentre",
         "location": {
-            "lat": 58.381023,
-            "lng": 26.719095
+            "lat": 58.372928,
+            "lng": 26.717988
         }
     },
     {
         "id": 4,
-        "title": "University Museum",
+        "title": "University of Tartu Museum",
         "location": {
             "lat": 58.380233,
             "lng": 26.715404
@@ -40,42 +40,26 @@
     },
     {
         "id": 5,
-        "title": "Institute of Computer Science",
+        "title": "University of Tartu Botanical Gardens",
         "location": {
-            "lat": 58.378249,
-            "lng": 26.714673
+            "lat": 58.384262,
+            "lng": 26.721258
         }
     },
     {
         "id": 6,
-        "title": "Old Anatomical Theatre",
+        "title": "University of Tartu Sports Hall",
         "location": {
-            "lat": 58.378016,
-            "lng": 26.717485
+            "lat": 58.388378,
+            "lng": 26.722077
         }
     },
     {
         "id": 7,
-        "title": "Tartu University Hospital",
+        "title": "Tartu University Clinic",
         "location": {
             "lat": 58.369697,
             "lng": 26.701758
-        }
-    },
-    {
-        "id": 8,
-        "title": "Institute of Chemistry",
-        "location": {
-            "lat": 58.367154,
-            "lng": 26.693157
-        }
-    },
-    {
-        "id": 9,
-        "title": "Institute of Physics",
-        "location": {
-            "lat": 58.366192,
-            "lng": 26.690207
         }
     }
 

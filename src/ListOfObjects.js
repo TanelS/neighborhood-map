@@ -2,6 +2,15 @@ import React, { Component } from 'react';
 
 
 class ListOfObjects extends Component {
+
+  triggerClick = (id) => {
+    for (let marker of this.props.places) {
+      if (id === marker.id) {
+        window.google.maps.event.trigger(marker, 'click')
+      }
+    }
+  }
+
   render() {
     return (
       <div className='filter-wrapper'>
@@ -15,7 +24,11 @@ class ListOfObjects extends Component {
 
         <div className='object-list'>
           {this.props.places.map((place) => (
-            <li key={place.id} className='object-list-item'>
+            <li key={place.id} className='object-list-item' 
+            onClick = {
+              (event) => 
+              {this.triggerClick(place.id)}
+            }>
               <p>{place.title}</p>
             </li>
           ))}

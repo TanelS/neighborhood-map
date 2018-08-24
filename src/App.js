@@ -52,6 +52,7 @@ class App extends Component {
 
       marker.addListener('click', function () {
         initMapContext.setActiveMarker(marker);
+        marker.setAnimation(window.google.maps.Animation.BOUNCE)
         initMapContext.getActiveMerkerInfo(marker).then(response =>
           initMapContext.populateInfoWindow(this, infoWindow, map) 
         )
@@ -90,8 +91,15 @@ class App extends Component {
     if (infowindow.marker !== marker) {
       infowindow.marker = marker;
       // infowindow.setContent('<div>' + marker.title + '</div>');
-      infowindow.setContent('<div>' + '<h3>'+ 'A short description' + ' - ' + marker.title +'</h3>' +  '<div>' + this.state.placeInfo + '</div>');
+      infowindow.setContent('<div>' + '<h3>'+ 'A short description' + ' - ' + marker.title +'</h3>' +  '<div>' + this.state.placeInfo + '</div>' +  '<div>' + '<hr>' + '<h5>' + 'Source: Wikipedia' + '</h5>' + '</div>');
       // infowindow.setContent(this.state.placeInfo);
+      
+      if (marker.setAnimation()) {
+        setTimeout(function () {
+          marker.setAnimation(null)
+        }, 400)
+      }
+      
       infowindow.open(map, marker);
       // Make sure the marker property is cleared if the infowindow is closed.
       infowindow.addListener('closeclick',function(){
