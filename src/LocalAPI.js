@@ -22,6 +22,7 @@ export const getWikipediaData = function (title) {
       return shortData;
     })
     .catch(function (error) {
-      console.log(error)
+      console.log(error);
+      return "There is a problem accessing Wikipedia, please check your network connectivity";
     });
 }

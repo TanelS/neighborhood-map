@@ -21,6 +21,14 @@ class App extends Component {
     loadJS(
       "https://maps.googleapis.com/maps/api/js?key=AIzaSyCvlfWqbR5h6Grp32libqaK6el_gf27wcU&v=3&callback=initMap"
     );
+    
+    /**
+     * If there is a problem with authentication. Information came from:
+     * https://developers.google.com/maps/documentation/javascript/events#auth-errors
+     */
+    window.gm_authFailure = function() { 
+      alert('Cannot load Google Maps! Please ensure that you have a valid Google Maps API key! Please go to https://developers.google.com/maps/documentation/javascript/get-api-key')
+      }
   };
 
   initMap = () => {
@@ -111,17 +119,17 @@ class App extends Component {
       infowindow.marker = marker;
       infowindow.setContent(
         "<div>" +
-          "<h3>" +
+          "<h3 tabIndex=\"0\">" +
           "A short description" +
           " - " +
           marker.title +
           "</h3>" +
-          "<div>" +
+          "<div tabIndex=\"0\">" +
           this.state.placeInfo +
           "</div>" +
           "<div>" +
           "<hr>" +
-          "<h5>" +
+          "<h5 tabIndex=\"0\">" +
           "Source: Wikipedia" +
           "</h5>" +
           "</div>"
@@ -168,8 +176,9 @@ function loadJS(src) {
   script.src = src;
   script.async = true;
   script.defer = true;
-  script.onerror = () => {
-    console.log("An error occurred");
+  script.onerror = (e) => {
+    alert('There is a problem accessing Google maps, please check your network connectivity.');
+    console.log("An error occurred, details:", e);
   };
   ref.parentNode.insertBefore(script, ref);
 }
